@@ -1,0 +1,27 @@
+:root{
+    /* farver */
+    --bg-color: #FFFEF3;
+    --text-color: #3B3D61;
+    --red: #E66151;
+    
+    
+    /* typografi (disse er random, da jeg ikke kan se live view)*/
+    --fontsize-large-mobil: 35px; 
+    --fontsize-medium-mobil: 20px;
+    --fontsize-small-mobil: 15px;
+    
+    --fontsize-large-web: 35px;
+    --fontsize-medium-web: 20px;
+    --fontsize-small-web: 15px;
+    }
+    
+    /* fonte: i am arial på h1 + h2 og i am georia på p */
+    @font-face {
+        font-family: "";
+        src: url();
+    }
+    @font-face {
+        font-family: "montserrat";
+        src: url();
+    }
+    
