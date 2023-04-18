@@ -1,5 +1,6 @@
 ---
 import "../CSS/style.css";
+import Knap from "../components/knap.astro";
 ---
 
 <html lang="en">
@@ -11,7 +12,17 @@ import "../CSS/style.css";
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<p>hej</p>
+		<h1>OMADA.WINE</h1>
+		<h2>Find os på</h2>
+		<p>Øster Farimagsgade 26, 2100 Østerbro</p>
+		<Knap size="medium"><a href="">Se tilbud</a></Knap>
+		<div class="knap">
+            <Knap size="small"><a href="">Vin</a></Knap>
+            <Knap size="small"><a href="">Øl & ciders</a></Knap>
+            <Knap size="small"><a href="">Ost</a></Knap>
+            <Knap size="small"><a href="">Pølser</a></Knap>
+			<Knap size="small"><a href="">Tilbehør</a></Knap>
+        </div>
+		<Knap size="large"><a href="">Book Tasting</a></Knap>
 	</body>
 </html>
