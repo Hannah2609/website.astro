@@ -16,13 +16,17 @@
     --fontsize-small-web: 15px;
     }
     
-    /* fonte: i am arial på h1 + h2 og i am georia på p */
+    /* font */
     @font-face {
-        font-family: "";
+        font-family: "aviano", serif;
+        font-weight: 400;
+        font-style: normal;
         src: url();
     }
     @font-face {
-        font-family: "";
+        font-family: "aviano", serif;
+        font-weight: 700;
+        font-style: normal;
         src: url();
     }
 
@@ -33,7 +37,7 @@
 
     body {
         color: var(--text-color);
-        font-family: "";
+        font-family: "aviano", serif;
         background-color: var(--bg-color);
     }
 
