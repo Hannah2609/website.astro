@@ -1,7 +1,8 @@
 :root{
     /* farver */
     --bg-color: #FFFEF3;
-    --text-color: #3B3D61;
+    --text-color: #000000bb;
+    --overskrift-color: #3B3D61;
     --red: #E66151;
     --white: #ffffff;
     
@@ -17,18 +18,7 @@
     }
     
     /* font */
-    @font-face {
-        font-family: "aviano", serif;
-        font-weight: 400;
-        font-style: normal;
-        src: url();
-    }
-    @font-face {
-        font-family: "aviano", serif;
-        font-weight: 700;
-        font-style: normal;
-        src: url();
-    }
+  
 
     * {
         box-sizing: border-box;
@@ -36,11 +26,24 @@
     }
 
     body {
-        color: var(--text-color);
-        font-family: "aviano", serif;
+        color: var(--overskrift-color);
         background-color: var(--bg-color);
+        font-family: sans-serif;
     }
 
+    main {
+        margin: 5%;
+    }
+
+    h1 {
+        color: #E66151;
+    }
+
+    p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: lighter;
+        color: var(--text-color);
+    }
 
 
     /* mobil size */

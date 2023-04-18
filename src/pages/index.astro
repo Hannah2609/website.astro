@@ -1,35 +1,40 @@
 ---
 import "../CSS/style.css";
+import Mainlayout from "../layouts/mainlayout.astro";
 import Knap from "../components/knap.astro";
+import Form from "../components/form.astro";
+import Anmeldelser from "../components/anmeldelser.astro";
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>OMADA.WINE</h1>
-		<h2>Find os på</h2>
-		<p>Øster Farimagsgade 26, 2100 Østerbro</p>
-		<Knap size="medium"><a href="">Se tilbud</a></Knap>
-		<p>hej</p>
-		<div class="knap">
-            <Knap size="small"><a href="">Vin</a></Knap>
-            <Knap size="small"><a href="">Øl & ciders</a></Knap>
-            <Knap size="small"><a href="">Ost</a></Knap>
-            <Knap size="small"><a href="">Pølser</a></Knap>
-			<Knap size="small"><a href="">Tilbehør</a></Knap>
-        </div>
-		<p>hej</p>
-		<Knap size="large"><a href="">Book Tasting</a></Knap>
-	</body>
-</html>
+<Mainlayout title="Omada Wine & Deli">
+
+
+  <main>
+    <h2>Find os på</h2>
+	<div>
+    <p>Øster Farimagsgade 26</p>
+	<p> 2100 København Ø</p>
+  	</div>
+	<div>
+		<p>Onsdag - søndag</p>
+		<p>11:00 - 20:00</p>
+	</div>
+
+	<Anmeldelser />
+	<h2>Indsend din anmeldelse af Omada Wine & Deli</h2>
+	<Form />
+  </main>
+
+
+</Mainlayout>
+
+
+
 
 <style>
-	a {color: var(--red);
-	text-decoration: none;}
+  a {
+    color: var(--red);
+    text-decoration: none;
+  }
 </style>

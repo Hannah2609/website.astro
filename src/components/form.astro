@@ -1,0 +1,60 @@
+---
+// frontmatter
+---
+
+<form>
+  <label for="name">Navn:</label>
+    <input type="text" name="name" required/>
+
+
+   <label for="text">Tekst:</label>
+    <input type="text" name="text" required />
+ 
+    <button>SEND</button>
+
+</form>
+
+<script>
+    const url = "https://yojiqgcnlfctxerxafjr.supabase.co/rest/v1/testimonials";
+    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvamlxZ2NubGZjdHhlcnhhZmpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE4MzkwNjUsImV4cCI6MTk5NzQxNTA2NX0.JLWHf417xBG-gBR1VWlesjZH_lUwXGc9fB4hDlAUyes";
+//  henter url og API key fra supabase
+
+// laver event når der trykkes på knap, så vi kan sende formen til databasen
+
+const form = document.querySelector("form");
+form.addEventListener("submit", sendForm);
+
+function sendForm(event){
+    // event.preventDefault()
+    // forhindre formen i at skrive teskten op i urlen når man sender
+    
+    const formData = form.elements;
+    // får fat i alle elementerne i formen
+
+    let name = formData.name.value;
+    // finder indholdet af de forskellige elementer
+    let text = formData.text.value;
+
+    // tjekker at vi får indholdet af inputfeltet - udskriver navnet i konsolen for at tjekke.
+    // console.log(formData.name.value);
+
+    // sender inholdet til databasen, vi henter ved brug af url 
+    fetch(url, {
+        method:"POST",
+        headers: {
+            apikey: key,
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({name,text})
+    })
+}
+
+</script>
+
+<style>
+    form {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+</style>

@@ -1,0 +1,53 @@
+---
+import Testimonial from "../components/testimonial.astro";
+
+const url = "https://yojiqgcnlfctxerxafjr.supabase.co/rest/v1/testimonials?approved=is.true";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvamlxZ2NubGZjdHhlcnhhZmpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE4MzkwNjUsImV4cCI6MTk5NzQxNTA2NX0.JLWHf417xBG-gBR1VWlesjZH_lUwXGc9fB4hDlAUyes";
+
+const response = await fetch(url, {
+  method: "GET",
+  headers: {
+    apikey: key,
+    'Accept': 'application/json',
+    'Content-Type':'"application/json',
+  },
+});
+const udsagn = await response.json();
+
+function getMaxText(str, length) {
+	// viser kun X antal karakterer
+	return str.substring(0, length);
+}
+---
+<h2>Hvad siger vores kunder?</h2>
+
+ <ul>
+      {
+        udsagn.map((testimonial) => {
+          return (
+            <Testimonial name = {testimonial.name} text = {getMaxText(testimonial.text,50)+"..."} />
+          );
+        })
+      }
+    </ul>
+
+<style>
+@media(max-width:600px) {
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    overflow-x: scroll;
+}
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+    overflow-x: scroll;
+}
+
+</style>
