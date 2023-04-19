@@ -55,6 +55,9 @@
         font-weight: lighter;
         color: var(--text-color);
     }
+    img {
+        max-width: 100%;
+    }
 
 
     /* mobil size */
