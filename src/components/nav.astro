@@ -1,4 +1,37 @@
 ---
-
+import "../CSS/style.css";
 ---
+<nav>
+    <ul>
+       <li ><a href="/">NYHEDER OG EVENTS</a></li>
+        <li><a href="/">DELI GODER</a></li>
+        <li><a href="/">SMAGNINGER OG ARRANGEMENTER</a></li>
+        <li><a href="/">OM OS</a></li>
+        <li class="blue_link"><a href="/">OMADA.WINE</a></li>
+    </ul>
+</nav>
 
+<style>
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 15px;
+    }
+
+    a {
+        font-size: 12px;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .blue_link a{
+        color: var(--blue);
+    }
+
+@media(max-width:800px){
+    nav{
+        display: none;
+    }
+}
+</style>
