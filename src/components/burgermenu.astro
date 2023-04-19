@@ -42,9 +42,9 @@ const menuContainer = document.querySelector('.menu-container');
    } 
 
     .burger-menu {
-  position: fixed;
+  position: absolute;
   top: 60px;
-  left: 20px;
+  left: 6%;
   background-color: transparent;
   
   cursor: pointer;
@@ -65,7 +65,7 @@ const menuContainer = document.querySelector('.menu-container');
 }
 
 .menu-container {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -95,7 +95,7 @@ const menuContainer = document.querySelector('.menu-container');
   text-align: left;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-bottom: 1px solid rgba(220, 220, 220, 0.759);
+  border-bottom: 1px solid var(--line-grey);
 }
 
 .burger-menu.active span:nth-of-type(1) {
@@ -135,14 +135,14 @@ const menuContainer = document.querySelector('.menu-container');
 }
 
 .first_item a{
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .small_items a {
 margin-top: 50px;
 }
 
-@media(min-width:800px){
+@media(min-width:1000px){
     .burger-menu{
         display: none;
     }

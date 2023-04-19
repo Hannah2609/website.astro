@@ -6,6 +6,8 @@
     --red: #E66151;
     --white: #ffffff;
     --blue: #3F74ED;
+    --line-grey: rgba(220, 220, 220, 0.759);
+    --footer-bg:#ECE9E0;
     
     
     /* typografi (disse er random, da jeg ikke kan se live view)*/
@@ -33,7 +35,7 @@
     }
 
     main {
-        margin: 5%;
+        margin: 6%;
     }
 
     h1 {

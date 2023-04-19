@@ -16,11 +16,13 @@ import "../CSS/style.css";
         display: flex;
         flex-direction: row;
         list-style: none;
-        gap: 15px;
+        gap: 5%;
+        margin-inline: 6%;
+        padding-left: 0;
     }
 
     a {
-        font-size: 12px;
+        font-size: 14px;
         text-decoration: none;
         color: var(--text-color);
     }
@@ -28,8 +30,11 @@ import "../CSS/style.css";
     .blue_link a{
         color: var(--blue);
     }
+    nav {
+        /* margin-inline: 5%; */
+    }
 
-@media(max-width:800px){
+@media(max-width:1000px){
     nav{
         display: none;
     }

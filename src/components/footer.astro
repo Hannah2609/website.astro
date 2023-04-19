@@ -1,3 +1,140 @@
 ---
 import "../CSS/style.css";
 ---
+
+<footer>
+  <section id="footer">
+    <div>
+      <h2>OMADA WINE & DELI</h2>
+      <p>
+        The dedicated online hideout for the worldly cosmopolitans, drinking
+        from home.
+      </p>
+      <img
+        src="/img/footer-payments.png"
+        alt="Betalingsmetoder godkendt hos OMADA WINE"
+      />
+    </div>
+    <div>
+      <ul>
+        <li><p>Vin Journalen</p></li>
+        <li><p>Om os</p></li>
+        <li><p>Omada Wine</p></li>
+        <li><p>Kontakt os</p></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><p>Log ind</p></li>
+        <li><p>Privacy Policy</p></li>
+        <li><p>Cookie Policy</p></li>
+        <li><p>Betingelser</p></li>
+      </ul>
+    </div>
+    <div>
+      <h2>NYHEDSBREV</h2>
+
+      <form>
+        <input type="text" />
+        <button> <p>Sign up</p></button>
+      </form>
+      <p>
+        Skriv dig op til vores gratis nyhedsbrev og få besked om nye produkter
+        eller events i delien.
+      </p>
+    </div>
+  </section>
+
+  <section class="blue_section">
+    <p>2023 KEA</p>
+  </section>
+</footer>
+
+<style>
+  @media (min-width: 600px) {
+    #footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+    }
+}
+    @media (min-width: 1000px) {
+      #footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      ul {
+        margin-inline: 2em;
+        padding-bottom: 80px;
+      }
+    
+    }
+  
+  #footer {
+    background-color: var(--footer-bg);
+    padding: 6%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  img {
+    max-width: 250px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  button {
+    background-color: black;
+    border: none;
+    padding: 8px;
+  }
+  button p {
+    color: white;
+  }
+
+  input {
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.382);
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .blue_section {
+    width: 100%;
+    height: 50px;
+    background-color: var(--blue);
+    color: white;
+    padding: 6%;
+  }
+
+  .blue_section p {
+    color: white;
+    font-size: 10px;
+  }
+</style>
