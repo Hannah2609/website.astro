@@ -1,0 +1,49 @@
+---
+import "../CSS/style.css";
+import Burgermenu from "./burgermenu.astro";
+import Nav from "./nav.astro";
+---
+
+<header>
+    <section class="blå_banner">
+    </section>
+<h1>
+    OMADA WINE & DELI
+</h1>
+<section id="header">
+<Burgermenu />
+<Nav />    
+</section>    
+
+
+</header>
+
+<style>
+.blå_banner {
+    width: 100%;
+    height: 30px;
+    background-color: var(--blue);
+}
+h1 {
+    text-align: center;
+    margin: 1em;
+}
+@media(max-width:1000px){
+    h1 {
+        font-size: 25px;
+        margin: 1.5em;
+        margin-bottom: 1em;
+    }
+    #header {
+    border-top: 1px solid var(--line-grey);
+    padding-bottom: 20px;
+}
+}
+@media(min-width:1000px){
+   #header {
+    border-bottom: 1px solid var(--line-grey);
+    padding-bottom: 20px;
+}
+}
+
+</style>
