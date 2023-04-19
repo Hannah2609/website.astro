@@ -4,7 +4,7 @@ import Mainlayout from "../layouts/mainlayout.astro";
 import Knap from "../components/knap.astro";
 import Form from "../components/form.astro";
 import Anmeldelser from "../components/anmeldelser.astro";
-
+import omada_store from "../img/omadastore.png";
 ---
 
 <Mainlayout title="Omada Wine & Deli">
@@ -16,6 +16,11 @@ import Anmeldelser from "../components/anmeldelser.astro";
     <p>Øster Farimagsgade 26</p>
 	<p> 2100 København Ø</p>
   	</div>
+
+	<div class="img_storefront">
+	<img src={omada_store} alt="store_front">
+</div>
+
 	<div>
 		<p>Onsdag - søndag</p>
 		<p>11:00 - 20:00</p>

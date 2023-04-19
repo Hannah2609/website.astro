@@ -18,7 +18,15 @@
     }
     
     /* font */
-  
+    @font-face {
+        font-family: "aviano", serif;
+        font-style: normal;
+        src: url();
+    }
+    @font-face {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        src: url();
+    }
 
     * {
         box-sizing: border-box;
@@ -28,7 +36,7 @@
     body {
         color: var(--overskrift-color);
         background-color: var(--bg-color);
-        font-family: sans-serif;
+        font-family: "aviano", sans-serif;
     }
 
     main {
