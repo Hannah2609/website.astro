@@ -10,20 +10,21 @@ const { size } = Astro.props;
     
     @media (max-width: 800px) {
       [data-size="small"] {
-        border: solid 2px var(--red);
+        border: solid 1.5px var(--red);
         padding: 5px;
+        width: 100%;
         background-color: transparent;
       }
     
       [data-size="medium"] {
-        border: solid 2px var(--white);
-        padding: 5px;
+        border: solid 1px var(--white);
+        padding: 10px;
         background-color: transparent;
       }
 
       [data-size="large"] {
         border: solid 2px var(--red);
-        padding: 5px;
+        padding: 10px;
         background-color: transparent;
       }
     }
@@ -31,14 +32,14 @@ const { size } = Astro.props;
     @media (min-width: 800px) {
       [data-size="small"] {
         border: solid 2px var(--red);
-        padding: 18px;
-        padding-inline: 80px;
+        padding: 8px;
+        width: 100%;
         background-color: transparent;
       }
 
       [data-size="medium"] {
         border: solid 2px var(--white);
-        padding: 21px;
+        padding: 15px;
         padding-inline: 70px;
         background-color: transparent;
       }

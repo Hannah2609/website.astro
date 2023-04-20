@@ -1,0 +1,53 @@
+---
+import "../CSS/style.css";
+const { link, billede } = Astro.props;
+---
+
+<article>
+  <a class="produkt_billeder" href={link}>
+     
+      <img
+        class="first_img"
+        src="/img/produkt-prøve.png"
+        alt="Foto af produkt"
+      /> 
+      <img
+        class="second_img"
+        src="/img/produkt-prøve2.png"
+        alt="Foto af produkt"
+      />
+  </a>
+
+  <div class="produkt_tekst">
+    <p>Coffee - Gamay of the Morning</p>
+    <p>DKK 100</p>
+  </div>
+</article>
+
+<style>
+  .produkt_billeder {
+    display: grid;
+    place-items: center;
+
+  }
+  .first_img {
+    grid-area: 1/1;
+  }
+  .second_img {
+    grid-area: 1/1;
+    display: none;
+    pointer-events: none;
+  }
+  .first_img:hover + .second_img {
+    display: block;
+  }
+
+  p {
+    margin-top: 1em;
+  }
+
+  article {
+    margin-bottom: 4em;
+  }
+
+</style>

@@ -1,0 +1,19 @@
+---
+import "../CSS/style.css";
+import Card from "./card.astro";
+---
+
+<section class="alle_produkter">
+  <Card />
+  <Card />
+  <Card />
+</section>
+
+<style>
+    .alle_produkter {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 2em;
+    }
+</style>

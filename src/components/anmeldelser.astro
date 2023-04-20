@@ -20,7 +20,8 @@ function getMaxText(str, length) {
 	return str.substring(0, length);
 }
 ---
-<h2>Hvad siger vores kunder?</h2>
+<section class="anmeldelser">
+<!-- <h2>Hvad siger vores kunder?</h2> -->
 
  <ul>
       {
@@ -31,23 +32,30 @@ function getMaxText(str, length) {
         })
       }
     </ul>
-
+</section>
 <style>
+
 @media(max-width:600px) {
 ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    gap: 5em;
+    flex-wrap: nowrap;
     overflow-x: scroll;
+    padding-left: 0;
 }
 }
+@media(min-width:600px) {
 ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    gap: 25%;
+    flex-wrap: nowrap;
     overflow-x: scroll;
+    padding-left: 0;
 }
-
+}
+.anmeldelser {
+    border-top: 2px solid var(--red);
+    padding-top: 3em;
+    margin-bottom: 4em;
+}
 </style>

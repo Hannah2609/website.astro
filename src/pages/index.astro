@@ -7,41 +7,188 @@ import Anmeldelser from "../components/anmeldelser.astro";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import omada_store from "../img/omadastore.png";
+import Filtrering from "../components/filtrering.astro";
+import AlleProdukter from "../components/alleProdukter.astro";
 ---
 
 <Mainlayout title="Omada Wine & Deli">
-
-<Header />
+  <Header />
   <main>
-    <h2>Find os på</h2>
-	<div>
-    <p>Øster Farimagsgade 26</p>
-	<p> 2100 København Ø</p>
-  	</div>
+    <section class="front">
+      <div class="front_text">
+        <h2>Find os på</h2>
+        <div class="front-text-1">
+          <p>Øster Farimagsgade 26</p>
+          <p>2100 København Ø</p>
+        </div>
+        <div>
+          <p>Onsdag - søndag</p>
+          <p>11:00 - 20:00</p>
+        </div>
+      </div>
+      <div class="img_storefront">
+        <img src={omada_store} alt="store_front" />
+      </div>
+    </section>
 
-	<div class="img_storefront">
-	<img src={omada_store} alt="store_front">
-</div>
+    <section class="nyheder">
+      <h2>NYHEDER OG EVENTS</h2>
+      <p>Se hvad der sker i delien hen over de næste par uger..</p>
 
-	<div>
-		<p>Onsdag - søndag</p>
-		<p>11:00 - 20:00</p>
-	</div>
+      <div class="poster">
+        <video class="bg_video" autoplay loop muted>
+          <source src="/video/baggrundsvideo2.mp4" type="video/mp4" />
+        </video>
 
-	<Anmeldelser />
-	<h2>Indsend din anmeldelse af Omada Wine & Deli</h2>
-	<Form />
+		<!-- <img class="grafik_1" src="/grafik/vin_glas.svg" alt="grafik vinfalske med et vinglas stregtegning">
+		<img class="grafik_2" src="/grafik/vin.svg" alt="grafik vinflaske stregtegning"> -->
+
+        <div class="overlay">
+          <h1>SIP & SNACK</h1>
+          <h2>FÅ 2 GLAS VIN FOR 1 GLAS PRIS</h2>
+          <h3>VED KØB AF DELI SNACKS</h3>
+          <Knap size="medium"> <a href="">Se tilbud</a> </Knap>
+        </div>
+      </div>
+    </section>
+
+	<section class="deli_goder">
+		<h2>DELI GODER</h2>
+		<p> <em>Tørstig? sulten? Nysgerrig?</em> Den klarer vi.</p>
+		<br>
+		<p> Tjek vores sortiment ud. Alt du ser kan du finde nede i vores Deli.</p>
+
+		<Filtrering />
+
+		<AlleProdukter />
+
+	</section>
+
+    <section class="about"></section>
+
+    <section class="anmeldelser">
+      <h2>Send din anmeldelse Omada Wine & Deli</h2>
+      <p>
+        Vi vil rigtig gerne høre fra jer, så send din oplevelse af delien ind.
+      </p>
+      <Form />
+      <Anmeldelser />
+    </section>
   </main>
 
   <Footer />
 </Mainlayout>
 
-
-
-
 <style>
-  a {
-    color: var(--red);
-    text-decoration: none;
+
+  /* sections */
+  @media (max-width: 1000px) {
+    .front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+      text-align: center;
+      margin-bottom: 4em;
+    }
+    .front-text-1 {
+      margin-bottom: 1em;
+    }
   }
+
+  @media (min-width: 1000px) {
+    .front {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 4em;
+    }
+    .front_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+    }
+    .front_text h2 {
+      margin: 0;
+    }
+  }
+
+  .nyheder {
+    border-top: 2px solid var(--red);
+    padding-top: 3em;
+    margin-bottom: 4em;
+  }
+  .nyheder p {
+	margin-bottom: 4em;
+  }
+
+  .anmeldelser {
+    border-top: 2px solid var(--red);
+    padding-top: 3em;
+    margin-bottom: 4em;
+  }
+
+  /* video */
+  .poster {
+	display: grid;
+	place-items: center;
+	/* position: relative; */
+  }
+  video {
+    width: 100%;
+	height: 80vh;
+    object-fit: cover;
+    z-index: -1;
+	grid-area: 1/1;
+
+  }
+
+  /* grafik */
+ 
+/* text overlay */
+
+  .overlay {
+    text-align: center;
+	grid-area: 1/1;
+  }
+  .overlay a {
+	color: white;
+  }
+  .overlay h1{
+	color: white;
+	font-size: 30px;
+	margin-bottom: 5%;
+  }
+   .overlay h2{
+	color: white;
+	font-size: 18px;
+  }
+   .overlay h3{
+	color: white;
+	font-size: 13px;
+	font-weight: 400;
+	margin-bottom: 2em;
+  }
+  
+  @media (min-width:800px) {
+	 .overlay h1{
+
+		font-size: 40px;
+	margin-bottom: 10%;
+  }
+   .overlay h2{
+	
+	font-size: 35px;
+  }
+   .overlay h3{
+	color: white;
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 2em;
+  }
+  }
+  /*  */
 </style>
