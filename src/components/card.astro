@@ -1,6 +1,6 @@
 ---
 import "../CSS/style.css";
-const { link, billede } = Astro.props;
+const { link, overskrift , pris} = Astro.props;
 ---
 
 <article>
@@ -19,8 +19,8 @@ const { link, billede } = Astro.props;
   </a>
 
   <div class="produkt_tekst">
-    <p>Coffee - Gamay of the Morning</p>
-    <p>DKK 100</p>
+    <p>{overskrift}</p>
+    <p>DKK {pris}</p>
   </div>
 </article>
 
