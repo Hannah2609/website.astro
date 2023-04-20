@@ -1,0 +1,138 @@
+---
+import "../CSS/style.css";
+import Knap from "./knap.astro";
+---
+
+<section>
+  <div class="indhold">
+    <img
+      src="/grafik/vinflaske_optrækker.png"
+      alt="Grafik af vinflaske med optrækker"
+    />
+    <h3 class="h3">OFFENTLIGE SMAGNINGER</h3>
+    <h2>ÅBEN VINSMAGNING</h2>
+    <p>
+      En gang om måneden er du inviteret til vores åbne vinsmagning, hvor du kan
+      smage vores udvalg af naturvine fra omada.wine's månedlige abonnenent
+      boks.
+    </p>
+<br>
+    <p><strong>DKK 145,-</strong> <em>per person</em></p>
+    <p><em>Inklusiv 6 forskellige smagninger.</em></p>
+<br>
+    <p>
+      Følg med her på siden, vores sociale medier eller tilmeld vores nyhedsbrev
+      for datoer.
+    </p>
+
+    <h3>PRIVATE SMAGNINGER</h3>
+    <p>
+      Vi laver skræddersyet private vinsmagninger og andre events som passer til
+      dine behov.
+    </p>
+    <p>
+      Udover det, tilbyder vi følgende vinsmagninger (minimum 4 personer og maks
+      op til 30):
+    </p>
+
+    <h2>INTRO TIL MIXED FERMANTATION</h2>
+    <p>
+      En introduktion til cider, fruit pét-nat og andre fermantationer. Omkring
+      1 time.
+    </p>
+<br>
+    <p>
+      <strong>DKK 199,-</strong>
+      <em>per person (with snacks + DKK 49,-)</em>
+    </p>
+
+    <h2>NATURVIN: 101</h2>
+    <p>
+      En general introduktion til naturvinens verden, den historie, smag og
+      stile. Omrking 1 time.
+    </p>
+<br>
+    <p>
+      <strong>DKK 349,-</strong>
+      <em>per person (with snacks + DKK 75,-)</em>
+    </p>
+
+    <h2>NATURVIN: ET DYK I VINKÆLDEREN</h2>
+    <p>
+      En tour i naturvine med nogle af de mest high-end cuvées og sjælnde
+      vintage vine fra vores vinkælder. Omkring 1-2 timer.
+    </p>
+<br>
+    <p>
+      <strong>DKK 499,-</strong>
+      <em>per person (with snacks + DKK 75,-)</em>
+    </p>
+    <button> <p>Book vinsmagning</p></button>
+
+    <p>
+      Hold dit næste private eller firma event hos Omada Wine & Deli; en unik og
+      intim setting for sxpecielle dage og fejringer.
+    </p>
+
+    <p>
+      Kan du ikke komme til Østerbro? Ingen problemer! Vi lejer også vores
+      tap-system og vinglas ud til private arrangementer.
+    </p>
+<br>
+    <p>Kontakt os for flere informationer</p>
+  </div>
+</section>
+
+<style>
+  section {
+   margin: 10%;
+    padding: 4em;
+    padding-top: 3em;
+
+    border: 1px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .indhold {
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+  }
+  h3 {
+    margin-top: 4em;
+    margin-bottom: 2em;
+    font-size: 25px;
+  }
+  .h3 {
+    margin-top: 1em;
+  }
+  h2 {
+    margin-top: 4em;
+  }
+  button {
+    background: var(--red);
+    border: solid 1px var(--red);
+    padding: 10px;
+    width: 300px;
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+  button:hover {
+    background-color: transparent;
+  }
+  button p:hover {
+    color: var(--red);
+  }
+  button p {
+    color: white;
+  }
+  strong {
+    font-weight: bold;
+    color: var(--overskrift-color);
+  }
+  img {
+    max-width: 100px;
+  }
+</style>

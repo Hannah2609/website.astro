@@ -9,6 +9,8 @@ import Footer from "../components/footer.astro";
 import omada_store from "../img/omadastore.png";
 import Filtrering from "../components/filtrering.astro";
 import AlleProdukter from "../components/alleProdukter.astro";
+import Instagram from "../components/instagram.astro";
+import Tastings from "../components/tastings.astro";
 ---
 
 <Mainlayout title="Omada Wine & Deli">
@@ -39,33 +41,59 @@ import AlleProdukter from "../components/alleProdukter.astro";
         <video class="bg_video" autoplay loop muted>
           <source src="/video/baggrundsvideo2.mp4" type="video/mp4" />
         </video>
-
-		<!-- <img class="grafik_1" src="/grafik/vin_glas.svg" alt="grafik vinfalske med et vinglas stregtegning">
-		<img class="grafik_2" src="/grafik/vin.svg" alt="grafik vinflaske stregtegning"> -->
-
         <div class="overlay">
           <h1>SIP & SNACK</h1>
-          <h2>FÅ 2 GLAS VIN FOR 1 GLAS PRIS</h2>
+          <h2>2 GLAS VIN FOR 1 GLAS PRIS</h2>
           <h3>VED KØB AF DELI SNACKS</h3>
-          <Knap size="medium"> <a href="">Se tilbud</a> </Knap>
+          <Knap size="medium"><a href="">Se tilbud</a></Knap>
         </div>
       </div>
     </section>
 
-	<section class="deli_goder">
-		<h2>DELI GODER</h2>
-		<p> <em>Tørstig? sulten? Nysgerrig?</em> Den klarer vi.</p>
-		<br>
-		<p> Tjek vores sortiment ud. Alt du ser kan du finde nede i vores Deli.</p>
+    <section class="deli_goder">
+      <h2>DELI GODER</h2>
+      <p><em>Tørstig? sulten? Nysgerrig?</em> Den klarer vi.</p>
+      <br />
+      <p>Tjek vores sortiment ud. Alt du ser kan du finde nede i vores Deli.</p>
 
-		<Filtrering />
+      <Filtrering />
 
-		<AlleProdukter />
+      <AlleProdukter />
+    </section>
 
+	<section class="tasting">
+		<h2>SMAGNINGER OG ARRANGEMENTER</h2>
+		<Tastings />
 	</section>
 
-    <section class="about"></section>
+    <section class="about">
+      <div class="about_tekst">
+        <h2>OM OMADA WINE & DELI</h2><img
+          class="grafik_about"
+          src="/grafik/vinglas.png"
+          alt="Grafik af vinglas"
+        />
+        <p>Tørstig? Sulten? Nysgerrig? Den klarer vi.</p>
+        <br />
+        <br />
+        <p>
+          I butikken kan du finde det fulde udvalg af naturlig vin,cider og
+          andre fermenterede drikkevarer, som du kender fra omada.wine. <br />
+          <br />
+          <br /> Du kan endda nyde et glas vin, inden du beslutter digfor, hvilken
+          flaske du vil tage med hjem.
+        </p>
+      </div>
 
+      <Knap color="red" size="medium"><a href="">Læs mere</a></Knap>
+
+      <Instagram />
+    </section>
+ <!-- <img
+        class="grafik2"
+        src="/grafik/vinflaske_optrækker.png"
+        alt="Grafik af vinflaske og en optrækker"
+      /> -->
     <section class="anmeldelser">
       <h2>Send din anmeldelse Omada Wine & Deli</h2>
       <p>
@@ -80,8 +108,6 @@ import AlleProdukter from "../components/alleProdukter.astro";
 </Mainlayout>
 
 <style>
-
-  /* sections */
   @media (max-width: 1000px) {
     .front {
       display: flex;
@@ -122,7 +148,7 @@ import AlleProdukter from "../components/alleProdukter.astro";
     margin-bottom: 4em;
   }
   .nyheder p {
-	margin-bottom: 4em;
+    margin-bottom: 4em;
   }
 
   .anmeldelser {
@@ -133,62 +159,83 @@ import AlleProdukter from "../components/alleProdukter.astro";
 
   /* video */
   .poster {
-	display: grid;
-	place-items: center;
-	/* position: relative; */
+    display: grid;
+    place-items: center;
+    /* position: relative; */
   }
   video {
     width: 100%;
-	height: 80vh;
+    height: 80vh;
     object-fit: cover;
     z-index: -1;
-	grid-area: 1/1;
-
+    grid-area: 1/1;
   }
-
-  /* grafik */
- 
-/* text overlay */
 
   .overlay {
     text-align: center;
-	grid-area: 1/1;
+    grid-area: 1/1;
   }
   .overlay a {
-	color: white;
+    color: white;
   }
-  .overlay h1{
-	color: white;
-	font-size: 30px;
-	margin-bottom: 5%;
+  .overlay h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 5%;
   }
-   .overlay h2{
-	color: white;
-	font-size: 18px;
+  .overlay h2 {
+    color: white;
+    font-size: 18px;
   }
-   .overlay h3{
-	color: white;
-	font-size: 13px;
-	font-weight: 400;
-	margin-bottom: 2em;
+  .overlay h3 {
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 2em;
   }
-  
-  @media (min-width:800px) {
-	 .overlay h1{
 
-		font-size: 40px;
-	margin-bottom: 10%;
-  }
-   .overlay h2{
-	
-	font-size: 35px;
-  }
-   .overlay h3{
-	color: white;
-	font-size: 20px;
-	font-weight: 400;
-	margin-bottom: 2em;
-  }
+  @media (min-width: 800px) {
+    .overlay h1 {
+      font-size: 40px;
+      margin-bottom: 10%;
+    }
+    .overlay h2 {
+      font-size: 35px;
+    }
+    .overlay h3 {
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 2em;
+    }
   }
   /*  */
+
+  /* about */
+  .about {
+    border-top: 2px solid var(--red);
+    padding-top: 3em;
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .about_tekst {
+    margin-bottom: 4em;
+    max-width: 500px;
+    text-align: center;
+  }
+  .grafik_about{
+	max-width: 80px;
+	margin-bottom: 2em;
+  }
+
+  /* tastings */
+  .tasting {
+	 border-top: 2px solid var(--red);
+    padding-top: 3em;
+    margin-bottom: 4em;
+  }
 </style>

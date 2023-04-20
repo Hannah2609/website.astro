@@ -8,17 +8,7 @@
     --blue: #3F74ED;
     --line-grey: rgba(220, 220, 220, 0.759);
     --footer-bg:#ECE9E0;
-    
-    
-    /* typografi (disse er random, da jeg ikke kan se live view)*/
-    --fontsize-large-mobil: 35px; 
-    --fontsize-medium-mobil: 20px;
-    --fontsize-small-mobil: 15px;
-    
-    --fontsize-large-web: 35px;
-    --fontsize-medium-web: 20px;
-    --fontsize-small-web: 15px;
-    }
+}
     
     /* font */
     @font-face {
@@ -49,13 +39,20 @@
     h1 {
         color: #E66151;
     }
+
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 1em;
+    }
+
+    h3 {
+        color: #E66151;
     }
     p {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-weight: lighter;
+        font-weight: 100;
         color: var(--text-color);
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     img {
         max-width: 100%;
@@ -63,6 +60,7 @@
     a {
     color: var(--red);
     text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
     /* mobil size */

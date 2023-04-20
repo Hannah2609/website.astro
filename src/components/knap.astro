@@ -1,10 +1,10 @@
 ---
 import "../CSS/style.css"
 
-const { size } = Astro.props;
+const { size, color } = Astro.props;
 ---
 
-<button class="knap" data-size={size}><slot></slot></button>
+<button class="knap" data-size={size} data-color={color}><slot></slot></button>
   
   <style>
     
@@ -39,7 +39,7 @@ const { size } = Astro.props;
 
       [data-size="medium"] {
         border: solid 2px var(--white);
-        padding: 15px;
+        padding: 10px;
         padding-inline: 70px;
         background-color: transparent;
       }
@@ -51,6 +51,9 @@ const { size } = Astro.props;
         background-color: transparent;
       }
     }
+     [data-color="red"] {
+      border-color: var(--red);
+     }
 
   </style>
   
