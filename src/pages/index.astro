@@ -11,6 +11,7 @@ import Filtrering from "../components/filtrering.astro";
 import AlleProdukter from "../components/alleProdukter.astro";
 import Instagram from "../components/instagram.astro";
 import Tastings from "../components/tastings.astro";
+import Animation from "../components/animation.astro";
 ---
 
 <Mainlayout title="Omada Wine & Deli">
@@ -36,13 +37,14 @@ import Tastings from "../components/tastings.astro";
     <section class="nyheder">
       <h2>NYHEDER OG EVENTS</h2>
       <p>Se hvad der sker i delien hen over de næste par uger..</p>
-
+  
       <div class="poster">
         <video class="bg_video" autoplay loop muted>
           <source src="/video/baggrundsvideo2.mp4" type="video/mp4" />
         </video>
         <div class="overlay">
-          <h1>SIP & SNACK</h1>
+          <h1>SIP & SNACK</h1>    
+          <Animation />
           <h2>2 GLAS VIN FOR 1 GLAS PRIS</h2>
           <h3>VED KØB AF DELI SNACKS</h3>
           <Knap size="medium"><a href="">Se tilbud</a></Knap>
