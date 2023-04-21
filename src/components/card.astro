@@ -1,6 +1,6 @@
 ---
 import "../CSS/style.css";
-const { link, navn , pris} = Astro.props;
+const { link, navn , pris, billede1, billede2} = Astro.props;
 ---
 
 <article>
@@ -8,12 +8,12 @@ const { link, navn , pris} = Astro.props;
      
       <img
         class="first_img"
-        src="/img/produkt-prøve.png"
+        src={"/img/produkt-billeder/" + billede1 }
         alt="Foto af produkt"
       /> 
       <img
         class="second_img"
-        src="/img/produkt-prøve2.png"
+        src={"/img/produkt-billeder/" + billede2 }
         alt="Foto af produkt"
       />
   </a>
