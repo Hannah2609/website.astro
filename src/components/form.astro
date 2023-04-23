@@ -4,32 +4,32 @@ import "../CSS/style.css";
 ---
 
 <form>
-    <div class="labels">
-  <label for="name"> <p>Fornavn</p> </label>
-    <input type="text" name="name" required/>
-</div>
-<div class="labels">
-   <label for="text"> <p>Anmeldelse</p> </label>
+  <div class="labels">
+    <label for="name"> <p>Fornavn</p></label>
+    <input type="text" name="name" required />
+  </div>
+  <div class="labels">
+    <label for="text"> <p>Anmeldelse</p></label>
     <input class="long_input" type="text" name="text" required />
- </div>
-    <button><p>Indsend</p></button>
-
+  </div>
+  <button><p>Indsend</p></button>
 </form>
 
 <script>
-    const url = "https://yojiqgcnlfctxerxafjr.supabase.co/rest/v1/testimonials";
-    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvamlxZ2NubGZjdHhlcnhhZmpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE4MzkwNjUsImV4cCI6MTk5NzQxNTA2NX0.JLWHf417xBG-gBR1VWlesjZH_lUwXGc9fB4hDlAUyes";
-//  henter url og API key fra supabase
+  const url = "https://yojiqgcnlfctxerxafjr.supabase.co/rest/v1/testimonials";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvamlxZ2NubGZjdHhlcnhhZmpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE4MzkwNjUsImV4cCI6MTk5NzQxNTA2NX0.JLWHf417xBG-gBR1VWlesjZH_lUwXGc9fB4hDlAUyes";
+  //  henter url og API key fra supabase
 
-// laver event når der trykkes på knap, så vi kan sende formen til databasen
+  // laver event når der trykkes på knap, så vi kan sende formen til databasen
 
-const form = document.querySelector("form");
-form.addEventListener("submit", sendForm);
+  const form = document.querySelector("form");
+  form.addEventListener("submit", sendForm);
 
-function sendForm(event){
-    event.preventDefault()
+  function sendForm(event) {
+    event.preventDefault();
     // forhindre formen i at skrive teskten op i urlen når man sender
-    
+
     const formData = form.elements;
     // får fat i alle elementerne i formen
 
@@ -40,68 +40,65 @@ function sendForm(event){
     // tjekker at vi får indholdet af inputfeltet - udskriver navnet i konsolen for at tjekke.
     // console.log(formData.name.value);
 
-    // sender inholdet til databasen, vi henter ved brug af url 
+    // sender inholdet til databasen, vi henter ved brug af url
     fetch(url, {
-        method:"POST",
-        headers: {
-            apikey: key,
-            'Accept':'application/json',
-            'Content-Type':'application/json'
-        },
-        body:JSON.stringify({name,text})
-    })
-}
-
+      method: "POST",
+      headers: {
+        apikey: key,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, text }),
+    });
+  }
 </script>
 
 <style>
-    form {
-        margin-top: 4em;
-        margin-bottom: 4em;
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        align-items: center;
-
-    }
-    button {
-        background: var(--red);
-        border: solid 1px var(--red);
-        padding: 10px;
-        width: 200px;
-    }
-    button:hover {
-        background-color: transparent;
-    }
-      button p {
-        color: white;
-    }
-    button:hover p {
-        color: var(--red);
-    }
-    .labels {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    @media(max-width:600px){
-        input {
-           padding: 10px;
-        width: 300px;
-        border: 1px solid var(--blue);
-        background-color: transparent;
-        }
-    }
-    @media(min-width:600px){
+  form {
+    margin-top: 4em;
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+  button {
+    background: var(--red);
+    border: solid 1px var(--red);
+    padding: 10px;
+    width: 200px;
+  }
+  button:hover {
+    background-color: transparent;
+  }
+  button p {
+    color: white;
+  }
+  button:hover p {
+    color: var(--red);
+  }
+  .labels {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  @media (max-width: 600px) {
     input {
-        padding: 10px;
-        width: 500px;
-        border: 1px solid var(--blue);
-        background-color: transparent;
+      padding: 10px;
+      width: 300px;
+      border: 1px solid var(--blue);
+      background-color: transparent;
     }
-}
-    .long_input {
-        height: 100px;
+  }
+  @media (min-width: 600px) {
+    input {
+      padding: 10px;
+      width: 500px;
+      border: 1px solid var(--blue);
+      background-color: transparent;
     }
-    
+  }
+  .long_input {
+    height: 100px;
+  }
 </style>
