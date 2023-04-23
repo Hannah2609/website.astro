@@ -19,7 +19,7 @@ import Animation from "../components/animation.astro";
   <main>
     <section class="front">
       <div class="front_text">
-        <h2>Find os på</h2>
+        <h3>Find os på</h3>
         <div class="front-text-1">
           <p>Øster Farimagsgade 26</p>
           <p>2100 København Ø</p>
@@ -37,17 +37,21 @@ import Animation from "../components/animation.astro";
     <section class="nyheder">
       <h2>NYHEDER OG EVENTS</h2>
       <p>Se hvad der sker i delien hen over de næste par uger..</p>
-  
+
       <div class="poster">
         <video class="bg_video" autoplay loop muted>
           <source src="/video/baggrundsvideo2.mp4" type="video/mp4" />
         </video>
         <div class="overlay">
-          <h1>SIP & SNACK</h1>    
-          <Animation />
-          <h2>2 GLAS VIN FOR 1 GLAS PRIS</h2>
-          <h3>VED KØB AF DELI SNACKS</h3>
-          <Knap size="medium"><a href="">Se tilbud</a></Knap>
+          <div class="text_overlay">
+            <h1>SIP & SNACK</h1>
+            <h2>
+              Se vores sommertilbud & <br /><br /> deltag i vores konkurrence
+            </h2>
+          </div>
+          <Knap class="knap_overlay" size="medium">
+            <a href="/sipsnack">Se kampagne</a>
+          </Knap>
         </div>
       </div>
     </section>
@@ -63,10 +67,10 @@ import Animation from "../components/animation.astro";
       <AlleProdukter />
     </section>
 
-	<section class="tasting">
-		<h2>SMAGNINGER OG ARRANGEMENTER</h2>
-		<Tastings />
-	</section>
+    <section class="tasting">
+      <h2>SMAGNINGER OG ARRANGEMENTER</h2>
+      <Tastings />
+    </section>
 
     <section class="about">
       <div class="about_tekst">
@@ -91,7 +95,7 @@ import Animation from "../components/animation.astro";
 
       <Instagram />
     </section>
- <!-- <img
+    <!-- <img
         class="grafik2"
         src="/grafik/vinflaske_optrækker.png"
         alt="Grafik af vinflaske og en optrækker"
@@ -195,6 +199,9 @@ import Animation from "../components/animation.astro";
     font-weight: 400;
     margin-bottom: 2em;
   }
+  .text_overlay {
+    margin-bottom: 2em;
+  }
 
   @media (min-width: 800px) {
     .overlay h1 {
@@ -210,6 +217,9 @@ import Animation from "../components/animation.astro";
       font-weight: 400;
       margin-bottom: 2em;
     }
+    .text_overlay {
+    margin-bottom: 4em;
+  }
   }
   /*  */
 
@@ -229,15 +239,19 @@ import Animation from "../components/animation.astro";
     max-width: 500px;
     text-align: center;
   }
-  .grafik_about{
-	max-width: 80px;
-	margin-bottom: 2em;
+  .grafik_about {
+    max-width: 80px;
+    margin-bottom: 2em;
   }
 
   /* tastings */
   .tasting {
-	 border-top: 2px solid var(--red);
+    border-top: 2px solid var(--red);
     padding-top: 3em;
     margin-bottom: 4em;
+  }
+  h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
   }
 </style>
