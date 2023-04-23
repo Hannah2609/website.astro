@@ -14,8 +14,6 @@ const { size, color } = Astro.props;
         padding: 5px;
         background-color: transparent;
          margin-left: 5%;
-         margin-top: 5%;
-         margin-bottom: 0;
       }
       [data-size="small"] {
         border: solid 1.5px var(--red);
@@ -55,6 +53,9 @@ const { size, color } = Astro.props;
         background-color: transparent;
       }
 
-
+    }
+[data-color="red"] {
+  border-color: var(--red);
+}
   </style>
   

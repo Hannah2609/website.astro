@@ -71,7 +71,7 @@ import Knap from "./knap.astro";
 
     <p>
       Hold dit næste private eller firma event hos Omada Wine & Deli; en unik og
-      intim setting for sxpecielle dage og fejringer.
+      intim setting for specielle dage eller fejringer.
     </p>
 
     <p>
@@ -96,6 +96,7 @@ import Knap from "./knap.astro";
   }
   .indhold {
     text-align: center;
+    min-width: 250px;
   }
   p {
     font-size: 15px;
@@ -134,5 +135,10 @@ import Knap from "./knap.astro";
   }
   img {
     max-width: 100px;
+  }
+  @media (max-width:600px){
+    button {
+      width: 200px;
+    }
   }
 </style>
