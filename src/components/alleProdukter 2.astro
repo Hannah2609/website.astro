@@ -1,0 +1,36 @@
+---
+import "../CSS/style.css";
+import Card from "./card.astro";
+
+const url =
+  "https://ncnxkzrhupydkojhsrje.supabase.co/rest/v1/omada_produkter";
+
+const options = {
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5jbnhrenJodXB5ZGtvamhzcmplIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5MjA1OTEsImV4cCI6MTk5NzQ5NjU5MX0.gXd0P_Fm2gqFW0IUW9yuh8yXfwhlAvtNtIdwk4wu_6s",
+  },
+};
+
+const response = await fetch(url, options);
+const data = await response.json();  
+
+console.log(data);
+---
+
+<section class="alle_produkter">
+  {
+    data.map((produkt) => (
+      <Card navn={produkt.navn} pris={produkt.pris} billede1={produkt.billede1}  billede2={produkt.billede2}/>
+  ))}
+  
+</section>
+
+<style>
+  .alle_produkter {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 2em;
+  }
+</style>
