@@ -73,13 +73,15 @@ import Tastings from "../components/tastings.astro";
 
     <section class="about" id="4">
       <div class="about_tekst">
-        <h2>OM OMADA WINE & DELI</h2><img
+        <h2>OM OMADA WINE & DELI</h2>
+        <h3 class="h3_small">naturvin, deli og hygge på Østerbro</h3>
+        
+        <img
           class="grafik_about"
           src="/grafik/vinglas.png"
           alt="Grafik af vinglas"
         />
         <p>Tørstig? Sulten? Nysgerrig? Den klarer vi.</p>
-        <br />
         <br />
         <p>
           I butikken kan du finde det fulde udvalg af naturlig vin,cider og
@@ -92,14 +94,9 @@ import Tastings from "../components/tastings.astro";
 
       <Knap color="red" size="medium"><a href="">Læs mere</a></Knap>
 
-
       <Instagram />
     </section>
-    <!-- <img
-        class="grafik2"
-        src="/grafik/vinflaske_optrækker.png"
-        alt="Grafik af vinflaske og en optrækker"
-      /> -->
+
     <section class="anmeldelser">
       <h2>Send din anmeldelse af Omada Wine & Deli</h2>
       <p>
@@ -161,6 +158,10 @@ import Tastings from "../components/tastings.astro";
     border-top: 2px solid var(--red);
     padding-top: 3em;
     margin-bottom: 4em;
+  }
+  .h3_small {
+    font-size: 18px;
+    margin-bottom: 2em;
   }
 
   /* video */
