@@ -1,0 +1,95 @@
+---
+import "../CSS/style.css";
+import Mainlayout from "../layouts/mainlayout.astro";
+import Knap from "../components/knap.astro";
+---
+
+<Mainlayout title="forside">
+  <section class="container">
+    <div class="wine">
+      <a class="a" href="">
+        <h1>omada.wine</h1>
+        <img src="/img/omadalogo.png" alt="Omada logo" />
+      </a>
+    </div>
+    <div class="deli">
+      <a class="a" href="/">
+        <h1>omada wine & deli</h1>
+        <img src="/img/omadastore.png" alt="Omada store front" />
+      </a>
+    </div>
+  </section>
+</Mainlayout>
+
+<style>
+  @media (min-width: 800px) {
+    .wine {
+      height: 100vh;
+      background-color: var(--red);
+    }
+    .wine h1 {
+      color: var(--bg-color);
+    }
+    .deli {
+      height: 100vh;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    h1 {
+      font-size: 60px;
+      font-weight: 600;
+    }
+    .a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+    max-height: 200px;
+  }
+  }
+
+  @media (max-width: 800px) {
+    .wine {
+      height: 50vh;
+      background-color: var(--red);
+    }
+    .wine h1 {
+      color: var(--bg-color);
+    }
+    .deli {
+      height: 50vh;
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+    .a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+    max-height: 100px;
+    opacity: 0.5;
+  }
+
+  }
+  h1 {
+    text-align: center;
+  }
+  .wine a{
+   color: var(--bg-color);
+  }
+ .deli a{
+   color: var(--red);
+  }
+</style>

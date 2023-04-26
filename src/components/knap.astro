@@ -27,6 +27,12 @@ const { size, color } = Astro.props;
         padding: 10px;
         background-color: transparent;
       }
+       [data-size="medium_red"] {
+        border: solid 1px var(--red);
+        padding: 10px;
+        background-color: transparent;
+      }
+
 
     }
   
@@ -48,6 +54,12 @@ const { size, color } = Astro.props;
 
       [data-size="medium"] {
         border: solid 2px var(--white);
+        padding: 10px;
+        padding-inline: 70px;
+        background-color: transparent;
+      }
+        [data-size="medium_red"] {
+        border: solid 2px var(--red);
         padding: 10px;
         padding-inline: 70px;
         background-color: transparent;
