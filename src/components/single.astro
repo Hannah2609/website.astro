@@ -1,0 +1,108 @@
+---
+import "../CSS/style.css";
+import Card from "./card.astro";
+
+const { oprindelse, beskrivelse, link, navn, pris, billede1, billede2 } =
+  Astro.props;
+
+const url = "https://ncnxkzrhupydkojhsrje.supabase.co/rest/v1/omada_produkter";
+
+const options = {
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5jbnhrenJodXB5ZGtvamhzcmplIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5MjA1OTEsImV4cCI6MTk5NzQ5NjU5MX0.gXd0P_Fm2gqFW0IUW9yuh8yXfwhlAvtNtIdwk4wu_6s",
+  },
+};
+
+const response = await fetch(url, options);
+const data = await response.json();
+
+console.log(data);
+---
+
+<main>
+    <section>
+  <div class="produkt_billeder">
+    <img
+      class="first_img"
+      src={"/img/produkt-billeder/" + billede1}
+      alt="Foto af produkt"
+    />
+    <img
+      class="second_img"
+      src={"/img/produkt-billeder/" + billede2}
+      alt="Foto af produkt"
+    />
+  </div>
+
+  <div class="tekst">
+        <h1>{navn}</h1>
+        <h3>{oprindelse}</h3>  
+        <p>{beskrivelse}</p> 
+        <h2>DKK {pris}</h2>
+  </div>
+</section>
+</main>
+
+  <style>
+    @media(max-width:800px){
+section {
+        max-width: 300px;
+        margin-inline: auto;
+        margin-bottom: 4em;
+    }
+     img {
+      max-width: 300px;
+    }
+    h2 {
+        margin-top: 2em;
+    }
+    h1 {
+        margin: 1em;
+        margin-inline: 0;
+    }
+    }
+
+     @media(min-width:800px){
+section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        max-width: 80%;
+        margin-inline: auto;
+        margin-bottom: 4em;
+    }
+     img {
+      max-width: 300px;
+    }
+    h2 {
+        margin-top: 4em;
+    }
+    h1 {
+        margin-bottom: 1em;
+    }
+    }
+    
+    .produkt_billeder {
+      display: grid;
+      grid-area: 1/1;
+      place-items: center;
+    }
+    .first_img {
+      grid-area: 1/1;
+    }
+    .second_img {
+      grid-area: 1/1;
+      display: none;
+      pointer-events: none;
+    }
+    .first_img:hover + .second_img {
+      display: block;
+    }
+
+    p {
+      margin-top: 1em;
+    }
+
+  </style>
+

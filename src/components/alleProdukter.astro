@@ -21,7 +21,7 @@ console.log(data);
 <section class="alle_produkter">
   {
     data.map((produkt) => (
-      <Card navn={produkt.navn} pris={produkt.pris} billede1={produkt.billede1}  billede2={produkt.billede2}/>
+      <Card link={"/produkter/" + produkt.id} navn={produkt.navn} pris={produkt.pris} billede1={produkt.billede1}  billede2={produkt.billede2}/>
   ))}
   
 </section>
